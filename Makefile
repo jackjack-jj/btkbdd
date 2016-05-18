@@ -28,7 +28,7 @@ btkbbdd/sdp.o: btkbdd/btkbdd.h btkbdd/apple.h
 evmuxd/evmuxd: evmuxd/main.o
 
 $(BINS):
-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
 %.8: %.pod
 	pod2man --center 'System management commands' --release $(VERSION) $< >$@
